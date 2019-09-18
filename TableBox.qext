@@ -1,0 +1,12 @@
+{
+	"name": "TableBox",
+	"description": "Straight Table box with all features, upto 20 columns dynamic loading of data.",
+	"type": "visualization",
+	"version": "1.0.0",
+	"icon": "table",
+	"author": "Ajay Kakkar",
+	"keywords": "qlik-sense, visualization",
+	"dependencies": {
+		"qlik-sense": ">=3.0.x"
+	}
+}
