@@ -157,5 +157,4 @@ Sub-Total Row
 
 <h3>Note : All other General settings i.e. Sorting, Add-ons, etc. are available.</h3>
 
-[![Everything Is AWESOME](https://img.youtube.com/vi/YiS-Mdx5yIM/0.jpg)]
-(https://www.youtube.com/watch?v=YiS-Mdx5yIM "Everything Is AWESOME")
+[![TableBox](http://img.youtube.com/vi/YiS-Mdx5yIM/0.jpg)](http://www.youtube.com/watch?v=YiS-Mdx5yIM "TableBox")
