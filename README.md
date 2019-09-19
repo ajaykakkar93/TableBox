@@ -157,5 +157,8 @@ Sub-Total Row
 
 <h3>Note : All other General settings i.e. Sorting, Add-ons, etc. are available.</h3>
 
-
-<iframe src="https://youtu.be/YiS-Mdx5yIM" height="200">
+ <iframe width="560" height="315"
+src="https://www.youtube.com/embed/MUQfKFzIOeU" 
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
