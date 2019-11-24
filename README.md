@@ -1,4 +1,10 @@
 # TableBox
+<h3>
+Bug Fix
+</h3>
+<ul>
+    <li>Multiple Dimension can be added with/without Show/Hide Column</li>
+</ul>
 
 <h3>
 Dimension Settings
