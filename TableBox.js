@@ -170,11 +170,13 @@ define(["qlik", "jquery", "./prop", "css!./style.css", "./tableHeadFixer", "./d3
 						sheetNavigation = cell.qAttrExps.qValues["5"].qText;
 					}
 				} else {
-					selectable = (measureInfo[key-1].mesSelEnable ? 'messel' : 'selectableMes');
-					mesSel = (measureInfo[key-1].mesSelEnable ? cell.qAttrExps.qValues["5"].qText : 'nosel');
-					measure = measure + 1;
-					SubTotal = ' sum';
-					sheetNavigation = (measureInfo[key-1].mesCellNavEnable?measureInfo[key-1].MesSheetNavigation:'nosel');
+						if(!measureInfo[key]==undefined){
+							selectable = (measureInfo[key-1].mesSelEnable ? 'messel' : 'selectableMes');
+							mesSel = (measureInfo[key-1].mesSelEnable ? cell.qAttrExps.qValues["5"].qText : 'nosel');
+							measure = measure + 1;
+							SubTotal = ' sum';
+							sheetNavigation = (measureInfo[key-1].mesCellNavEnable?measureInfo[key-1].MesSheetNavigation:'nosel');
+						}
 				}
 				if (cell.qIsOtherCell) {
 					cell.qText = dimensionInfo[key].othersLabel;
