@@ -170,12 +170,13 @@ define(["qlik", "jquery", "./prop", "css!./style.css", "./tableHeadFixer", "./d3
 						sheetNavigation = cell.qAttrExps.qValues["5"].qText;
 					}
 				} else {
-						if(!measureInfo[key]==undefined){
-							selectable = (measureInfo[key-1].mesSelEnable ? 'messel' : 'selectableMes');
-							mesSel = (measureInfo[key-1].mesSelEnable ? cell.qAttrExps.qValues["5"].qText : 'nosel');
+						if(measureInfo[key - dimensionInfo.length]!=undefined){
+							//console.log(key,measureInfo[key - dimensionInfo.length]);
+							selectable = (measureInfo[key - dimensionInfo.length].mesSelEnable ? 'messel' : 'selectableMes');
+							mesSel = (measureInfo[key - dimensionInfo.length].mesSelEnable ? cell.qAttrExps.qValues["5"].qText : 'nosel');
 							measure = measure + 1;
 							SubTotal = ' sum';
-							sheetNavigation = (measureInfo[key-1].mesCellNavEnable?measureInfo[key-1].MesSheetNavigation:'nosel');
+							sheetNavigation = (measureInfo[key - dimensionInfo.length].mesCellNavEnable?measureInfo[key - dimensionInfo.length].MesSheetNavigation:'nosel');
 						}
 				}
 				if (cell.qIsOtherCell) {
@@ -264,6 +265,7 @@ define(["qlik", "jquery", "./prop", "css!./style.css", "./tableHeadFixer", "./d3
 			//copyValue:true
 		},
 		paint: function($element, layout) {
+			console.log(layout);
 			var objid = layout.qInfo.qId;
 			$element.attr("id", "table_container_" + objid);
 			$element.css("overflow", "scroll");
