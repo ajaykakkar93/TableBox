@@ -4,6 +4,7 @@ Bug Fix
 </h3>
 <ul>
     <li>Multiple Dimension can be added with/without Show/Hide Column</li>
+	 <li>Navigation on cell click erorr solved</li>
 </ul>
 
 <h3>
