@@ -1,4 +1,4 @@
-define(["qlik", "jquery", "./prop", "css!./style.css", "./tableHeadFixer", "./d3.v3.min"], function(qlik, $, prop) {
+define(["qlik", "qvangular", "jquery", "./prop", "css!./style.css", "./tableHeadFixer", "./d3.v3.min"], function(qlik, qv,$, prop) {
 	'use strict';
 	var tableToExcel = (function() {
 		// Define your style class template.
@@ -345,10 +345,10 @@ define(["qlik", "jquery", "./prop", "css!./style.css", "./tableHeadFixer", "./d3
 				totalHtml += "<tr id='total_top_" + objid + "'><td style='" + txtcolor + backgroundcolor + TBorderColor + "'><div style='" + FStyle + "'>Total</div></td>";
 				//colspan='"+(dimCount)+"'
 				for (var i = 0; i < (dimCount - 1); i++) {
-					totalHtml += "<td style='font-weight:600; text-align:center; " + txtcolor + backgroundcolor + TBorderColor + "' class='dummy'><div style='" + FStyle + "'>&nbsp;</div></td>";
+					totalHtml += "<td style='font-weight:600; text-align:"+layout.TotalTextAlign+"; " + txtcolor + backgroundcolor + TBorderColor + "' class='dummy'><div style='" + FStyle + "'>&nbsp;</div></td>";
 				}
 				hypercube.qGrandTotalRow.forEach(function(cell) {
-					totalHtml += '<td style="font-weight:600; text-align:center; ' + txtcolor + backgroundcolor + TBorderColor + '"><div style="' + FStyle + '">' + cell.qText + '</div></td>';
+					totalHtml += '<td style="font-weight:600; text-align:'+layout.TotalTextAlign+'; ' + txtcolor + backgroundcolor + TBorderColor + '"><div style="' + FStyle + '">' + cell.qText + '</div></td>';
 				});
 				totalHtml += "</tr>";
 				totalHtml += (totalAlign == "2" ? "</tfoot>" : "</thead>");
@@ -518,6 +518,30 @@ define(["qlik", "jquery", "./prop", "css!./style.css", "./tableHeadFixer", "./d3
 					}
 				}
 			});
+			
+			
+			
+			// added
+			
+			
+			/*
+			let promises = Array.apply(null, Array(numberOfPages)).map(function (data, index) {
+				let page = {
+					qTop: (pageheight * index) + index,
+					qLeft: 0,
+					qWidth: column,
+					qHeight: pageheight
+				};
+				
+				console.log("Details",pageheight,column,numberOfPages,index,data);
+				return self.getHyperCubeData('/qHyperCubeDef', [page]);
+			}, this)
+			
+			Promise.all(promises).then(function(data) {
+				console.log("PromiceGetDataNew",data);
+			});
+			*/
+			
 			ColGrp = '';
 
 			
