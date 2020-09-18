@@ -78,6 +78,7 @@ Header/Data Settings
    <li>Total Background Color : Total background color</li>
    <li>Total Cell Padding : can add padding in PX to total eg: 5px</li>
    <li>Total Font size : can add custom size</li>
+   <li>Total Text Align : Center|Left|Right</li>
    <li>Default Data Style : Will apply default style to table Data Cell</li>
    <li>Data CSS : Custom CSS</li>
    <li>Data  Color : Cell text color</li>
