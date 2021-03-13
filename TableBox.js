@@ -252,8 +252,8 @@ define(["qlik", "qvangular", "jquery", "./prop", "css!./style.css", "./tableHead
 				qDimensions: [],
 				qMeasures: [],
 				qInitialDataFetch: [{
-					qWidth: 20,
-					qHeight: 500
+					qWidth: 50,
+					qHeight: 50
 				}]
 			}
 		},
@@ -501,7 +501,7 @@ define(["qlik", "qvangular", "jquery", "./prop", "css!./style.css", "./tableHead
 					qTop: row,
 					qLeft: 0,
 					qWidth: colcount,
-					qHeight: Math.min(500, totalrows - rowcount)
+					qHeight: Math.min(50, totalrows - rowcount)
 				}];
 				self.backendApi.getData(requestPage).then(function(dataPages) {
 					rowcount += dataPages[0].qMatrix.length;
