@@ -241,7 +241,7 @@ define(["qlik", "jquery"], function(qlik, $) {
 			dimensions: {
 				uses: "dimensions",
 				min: 0,
-				max: 13,
+				max: 20,
 				items: {
 					showIF: showIF,
 					info: colorInfo,
@@ -298,7 +298,7 @@ define(["qlik", "jquery"], function(qlik, $) {
 			measures: {
 				uses: "measures",
 				min: 0,
-				max: 13,
+				max: 30,
 				items: {
 					showIF: showIF,
 					TotalAggr: {
@@ -594,6 +594,23 @@ define(["qlik", "jquery"], function(qlik, $) {
 								show: function(d) {
 									return d.DefaultTotalStyle;
 								}
+							},
+							TotalTextAlign: {
+								type: "string",
+								component: "dropdown",
+								label: "Total Text Align",
+								ref: "TotalTextAlign",
+								options: [{
+									value: "left",
+									label: "Left"
+								}, {
+									value: "right",
+									label: "Right"
+								}, {
+									value: "center",
+									label: "Center"
+								}],
+								defaultValue:"center"
 							},
 							tdFontsizeshow: {
 								type: "boolean",
